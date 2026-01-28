@@ -20,7 +20,11 @@ async def chat_node(state: AgentState, config=None):
     if state.get("user_profile"):
         profile_context = f"\n\nHere is the user's profile information:\n{state['user_profile']}"
     
-    system_message = SystemMessage(content=f"You are a helpful assistant. Always respond with valid markdown.{notes_context}{profile_context}")
+    time_context = ""
+    if state.get("current_time"):
+        time_context = f"\n\nCurrent time: {state['current_time']}"
+    
+    system_message = SystemMessage(content=f"You are a helpful assistant. Always respond with valid markdown.{notes_context}{profile_context}{time_context}")
     messages = [system_message] + state["messages"]
     
     try:

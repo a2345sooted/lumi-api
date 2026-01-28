@@ -7,3 +7,4 @@ class AgentState(TypedDict):
     user_id: str
     user_notes: List[str]
     user_profile: str
+    current_time: str
