@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from langchain_core.messages import HumanMessage, AIMessage
 from src.api.websockets.manager import manager
 from src.agents.registry import get_chat_agent
-from src.agents.chat.agent import run_chat_stream
+from src.agents.chat.run import run_chat_stream
 from src.database import get_db
 from src.repos.chat import ConversationRepository, MessageRepository
 from src.api.auth import get_current_user_id
