@@ -1,11 +1,14 @@
 sqlalchemy
 pydantic
 fastapi
-uvicorn
+uvicorn[standard]
+websockets
+wsproto
 python-dotenv
 langchain
 langgraph
 langgraph-checkpoint-postgres
+psycopg2-binary
 psycopg_pool
 langchain-openai
 openai
