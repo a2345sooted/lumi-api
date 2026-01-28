@@ -51,7 +51,7 @@ class UserNoteRepository:
             self.db.add(db_note)
         self.db.commit()
 
-    def start_optimization_run(self, user_id: str) -> bool:
+    def start_optimization_run(self, user_id: str, thread_id: Optional[uuid.UUID] = None) -> bool:
         """
         Attempts to start an optimization run for a user.
         Returns True if the run was started, False if one is already in progress.
@@ -65,10 +65,11 @@ class UserNoteRepository:
             
             if existing_run:
                 existing_run.status = "PROCESSING"
+                existing_run.thread_id = thread_id
                 existing_run.started_at = func.now()
             else:
                 # Create a new run
-                new_run = NoteOptimizationRun(user_id=user_id, status="PROCESSING")
+                new_run = NoteOptimizationRun(user_id=user_id, thread_id=thread_id, status="PROCESSING")
                 self.db.add(new_run)
             
             self.db.commit()

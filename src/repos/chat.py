@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from src.models.chat import Conversation, Message
+from src.models.chat import Conversation, Message, ChatRun
 from typing import List, Optional
 import uuid
 
@@ -38,6 +38,21 @@ class ConversationRepository:
             self.db.commit()
             return True
         return False
+
+    def start_chat_run(self, user_id: str, thread_id: uuid.UUID) -> ChatRun:
+        db_run = ChatRun(user_id=user_id, thread_id=thread_id, status="PROCESSING")
+        self.db.add(db_run)
+        self.db.commit()
+        self.db.refresh(db_run)
+        return db_run
+
+    def end_chat_run(self, run_id: uuid.UUID, status: str = "COMPLETED") -> Optional[ChatRun]:
+        db_run = self.db.query(ChatRun).filter(ChatRun.id == run_id).first()
+        if db_run:
+            db_run.status = status
+            self.db.commit()
+            self.db.refresh(db_run)
+        return db_run
 
 class MessageRepository:
     def __init__(self, db: Session):

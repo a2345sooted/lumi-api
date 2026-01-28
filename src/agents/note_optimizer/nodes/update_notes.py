@@ -11,9 +11,10 @@ async def update_notes_node(state: NoteOptimizerState):
     try:
         repo = UserNoteRepository(db)
         user_id = state.get("user_id")
+        thread_id = state.get("thread_id")
         optimized_notes = state.get("optimized_notes", [])
         
-        logger.info(f"Optimizing/Updating notes for user {user_id}. Found {len(optimized_notes)} notes.")
+        logger.info(f"Optimizing/Updating notes for user {user_id} (Thread: {thread_id}). Found {len(optimized_notes)} notes.")
         
         # Prepare notes with embeddings
         notes_with_embeddings = []

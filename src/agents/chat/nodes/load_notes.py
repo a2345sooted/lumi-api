@@ -1,8 +1,10 @@
 from src.agents.chat.state import AgentState
 from src.database import SessionLocal
 from src.repos.notes import UserNoteRepository
+from src.repos.chat import ConversationRepository
+import uuid
 
-async def load_notes_node(state: AgentState):
+async def load_notes_node(state: AgentState, config=None):
     db = SessionLocal()
     try:
         repo = UserNoteRepository(db)
@@ -19,5 +21,11 @@ async def load_notes_node(state: AgentState):
             "user_notes": dynamic_notes,
             "user_profile": profile_content
         }
+    except Exception as e:
+        chat_run_id = config.get("configurable", {}).get("chat_run_id")
+        if chat_run_id:
+            chat_repo = ConversationRepository(db)
+            chat_repo.end_chat_run(uuid.UUID(chat_run_id), status="FAILED")
+        raise e
     finally:
         db.close()

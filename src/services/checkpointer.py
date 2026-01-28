@@ -28,6 +28,7 @@ async def init_checkpointer():
             max_size=20,
             kwargs={"autocommit": True, "prepare_threshold": 0},
             open=False,
+            check=AsyncConnectionPool.check_connection,
         )
         await _pool.open()
         logger.info("Connection pool for LangGraph checkpointer opened")
