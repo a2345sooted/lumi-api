@@ -17,6 +17,7 @@ router = APIRouter()
 
 class UserMessageRequest(BaseModel):
     message: str
+    user_id: Optional[str] = None
 
 class CreateConversationResponse(BaseModel):
     id: str
@@ -36,15 +37,15 @@ class MessageResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 @router.post("/conversations", response_model=CreateConversationResponse)
-async def create_conversation(db: Session = Depends(get_db)):
+async def create_conversation(user_id: Optional[str] = None, db: Session = Depends(get_db)):
     repo = ConversationRepository(db)
-    conversation = repo.create()
+    conversation = repo.create(user_id=user_id)
     return {"id": str(conversation.id)}
 
 @router.get("/conversations", response_model=List[ConversationResponse])
-async def list_conversations(db: Session = Depends(get_db)):
+async def list_conversations(user_id: Optional[str] = None, db: Session = Depends(get_db)):
     repo = ConversationRepository(db)
-    conversations = repo.list_all()
+    conversations = repo.list_all(user_id=user_id)
     return conversations
 
 @router.get("/conversations/{conversation_id}/messages", response_model=List[MessageResponse])
@@ -89,8 +90,16 @@ async def post_user_message(
             content=request.message
         )
 
-        config = {"configurable": {"thread_id": conversation_id}}
-        inputs = {"messages": [HumanMessage(content=request.message)]}
+        config = {
+            "configurable": {
+                "thread_id": conversation_id,
+                "user_id": request.user_id
+            }
+        }
+        inputs = {
+            "messages": [HumanMessage(content=request.message)],
+            "user_id": request.user_id
+        }
         
         # Broadcast thinking state
         await manager.broadcast({
@@ -114,6 +123,9 @@ async def post_user_message(
                         "content": content_chunk,
                         "conversation_id": conversation_id
                     })
+            elif hasattr(chunk, "tool_calls") and chunk.tool_calls:
+                 # It's a message with tool calls, but maybe no content yet
+                 pass
         
         # Broadcast done event
         await manager.broadcast({

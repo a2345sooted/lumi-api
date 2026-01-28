@@ -7,8 +7,8 @@ class ConversationRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create(self, title: str = "Untitled") -> Conversation:
-        db_conversation = Conversation(title=title)
+    def create(self, title: str = "Untitled", user_id: Optional[str] = None) -> Conversation:
+        db_conversation = Conversation(title=title, user_id=user_id)
         self.db.add(db_conversation)
         self.db.commit()
         self.db.refresh(db_conversation)
@@ -17,8 +17,11 @@ class ConversationRepository:
     def get_by_id(self, conversation_id: uuid.UUID) -> Optional[Conversation]:
         return self.db.query(Conversation).filter(Conversation.id == conversation_id).first()
 
-    def list_all(self) -> List[Conversation]:
-        return self.db.query(Conversation).order_by(Conversation.updated_at.desc()).all()
+    def list_all(self, user_id: Optional[str] = None) -> List[Conversation]:
+        query = self.db.query(Conversation)
+        if user_id:
+            query = query.filter(Conversation.user_id == user_id)
+        return query.order_by(Conversation.updated_at.desc()).all()
 
     def update_title(self, conversation_id: uuid.UUID, title: str) -> Optional[Conversation]:
         db_conversation = self.get_by_id(conversation_id)
