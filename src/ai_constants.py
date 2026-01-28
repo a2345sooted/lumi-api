@@ -1,0 +1,3 @@
+OPENAI_MODEL_4O_MINI = "gpt-4o-mini"
+OPENAI_MODEL_5_MINI = "gpt-5-mini-2025-08-07"
+OPENAI_MODEL_5_2 = "gpt-5.2-2025-12-11"

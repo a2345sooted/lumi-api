@@ -1,0 +1,11 @@
+sqlalchemy
+pydantic
+fastapi
+uvicorn
+python-dotenv
+langchain
+langgraph
+langgraph-checkpoint-postgres
+psycopg_pool
+langchain-openai
+openai
