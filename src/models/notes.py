@@ -14,3 +14,11 @@ class UserNote(Base):
     embedding = Column(VECTOR(1536))
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+class NoteOptimizationRun(Base):
+    __tablename__ = "note_optimization_runs"
+
+    user_id = Column(String, primary_key=True)
+    status = Column(String, nullable=False, server_default="PROCESSING")
+    started_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())

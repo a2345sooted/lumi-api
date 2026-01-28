@@ -1,0 +1,1 @@
+ALTER TABLE note_optimization_runs ADD COLUMN status VARCHAR DEFAULT 'PROCESSING';

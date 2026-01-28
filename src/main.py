@@ -7,7 +7,8 @@ from src.services.checkpointer import init_checkpointer, close_checkpointer, get
 from src.api.websockets.router import router as ws_router
 from src.api.chat.router import router as chat_router
 from src.agents.chat.agent import compile_chat_agent
-from src.agents.registry import register_chat_agent
+from src.agents.note_optimizer.agent import compile_note_optimizer_agent
+from src.agents.registry import register_chat_agent, register_note_optimizer_agent
 
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -22,6 +23,11 @@ async def lifespan(app: FastAPI):
     chat_agent = compile_chat_agent(checkpointer=checkpointer)
     register_chat_agent(chat_agent)
     logger.info("Chat agent compiled and registered with persistent checkpointer")
+
+    # Compile and register note optimizer agent
+    note_optimizer_agent = compile_note_optimizer_agent()
+    register_note_optimizer_agent(note_optimizer_agent)
+    logger.info("Note optimizer agent compiled and registered")
     
     yield
     logger.info("Shutting down lumi...")

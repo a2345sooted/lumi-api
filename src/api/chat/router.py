@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from langchain_core.messages import HumanMessage, AIMessage
 from src.api.websockets.manager import manager
 from src.agents.registry import get_chat_agent
+from src.agents.chat.agent import run_chat_stream
 from src.database import get_db
 from src.repos.chat import ConversationRepository, MessageRepository
 from src.api.auth import get_current_user_id
@@ -140,8 +141,9 @@ async def post_user_message(
         })
 
         full_content = ""
-        # Use astream to capture tokens
-        async for chunk, metadata in chat_agent.astream(inputs, config=config, stream_mode="messages"):
+        # Use run_chat_stream to capture tokens and trigger optimizer
+        async for chunk_data in run_chat_stream(chat_agent, inputs, config):
+            chunk, metadata = chunk_data
             if isinstance(chunk, AIMessage) and chunk.content:
                 content_chunk = chunk.content
                 if isinstance(content_chunk, list):

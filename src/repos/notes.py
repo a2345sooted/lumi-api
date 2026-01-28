@@ -1,7 +1,11 @@
+from sqlalchemy import func
 from sqlalchemy.orm import Session
-from src.models.notes import UserNote
+from src.models.notes import UserNote, NoteOptimizationRun
 from typing import List, Optional
 import uuid
+import logging
+
+logger = logging.getLogger(__name__)
 
 class UserNoteRepository:
     def __init__(self, db: Session):
@@ -30,3 +34,59 @@ class UserNoteRepository:
             self.db.commit()
             return True
         return False
+
+    def replace_for_user(self, user_id: str, notes: List[dict]) -> None:
+        """
+        Replaces all notes for a user with a new set of notes.
+        Each note in the list should be a dict with 'content', 'note_type', and optionally 'embedding'.
+        """
+        self.db.query(UserNote).filter(UserNote.user_id == user_id).delete()
+        for note_data in notes:
+            db_note = UserNote(
+                user_id=user_id,
+                content=note_data["content"],
+                note_type=note_data.get("note_type", "Dynamic"),
+                embedding=note_data.get("embedding")
+            )
+            self.db.add(db_note)
+        self.db.commit()
+
+    def start_optimization_run(self, user_id: str) -> bool:
+        """
+        Attempts to start an optimization run for a user.
+        Returns True if the run was started, False if one is already in progress.
+        A run is considered in progress if it exists and status is 'PROCESSING'.
+        """
+        try:
+            # Check if a run already exists
+            existing_run = self.db.query(NoteOptimizationRun).filter(NoteOptimizationRun.user_id == user_id).first()
+            if existing_run and existing_run.status == "PROCESSING":
+                return False
+            
+            if existing_run:
+                existing_run.status = "PROCESSING"
+                existing_run.started_at = func.now()
+            else:
+                # Create a new run
+                new_run = NoteOptimizationRun(user_id=user_id, status="PROCESSING")
+                self.db.add(new_run)
+            
+            self.db.commit()
+            return True
+        except Exception as e:
+            self.db.rollback()
+            logger.error(f"Error starting optimization run for user {user_id}: {e}")
+            return False
+
+    def end_optimization_run(self, user_id: str, status: str = "COMPLETED") -> None:
+        """
+        Ends an optimization run for a user by updating the status.
+        """
+        try:
+            run = self.db.query(NoteOptimizationRun).filter(NoteOptimizationRun.user_id == user_id).first()
+            if run:
+                run.status = status
+                self.db.commit()
+        except Exception as e:
+            self.db.rollback()
+            logger.error(f"Error ending optimization run for user {user_id}: {e}")
