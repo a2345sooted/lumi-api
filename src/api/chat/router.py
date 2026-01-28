@@ -5,7 +5,8 @@ import uuid
 import datetime
 import logging
 from sqlalchemy.orm import Session
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage
+from src.api.websockets.manager import manager
 from src.agents.registry import get_chat_agent
 from src.database import get_db
 from src.repos.chat import ConversationRepository, MessageRepository
@@ -77,20 +78,45 @@ async def post_user_message(
         config = {"configurable": {"thread_id": conversation_id}}
         inputs = {"messages": [HumanMessage(content=request.message)]}
         
-        result = await chat_agent.ainvoke(inputs, config=config)
+        # Broadcast thinking state
+        await manager.broadcast({
+            "type": "lumi_thinking",
+            "conversation_id": conversation_id
+        })
+
+        full_content = ""
+        # Use astream to capture tokens
+        async for chunk, metadata in chat_agent.astream(inputs, config=config, stream_mode="messages"):
+            if isinstance(chunk, AIMessage) and chunk.content:
+                content_chunk = chunk.content
+                if isinstance(content_chunk, list):
+                    # Handle cases where content might be a list of dicts (e.g. tool calls)
+                    # For a simple chat agent it's usually just a string
+                    pass 
+                else:
+                    full_content += content_chunk
+                    await manager.broadcast({
+                        "type": "token",
+                        "content": content_chunk,
+                        "conversation_id": conversation_id
+                    })
         
-        final_message = result["messages"][-1]
-        
+        # Broadcast done event
+        await manager.broadcast({
+            "type": "done",
+            "conversation_id": conversation_id
+        })
+
         # Save assistant response to database
         message_repo.add_message(
             conversation_id=conversation_id,
             role="assistant",
-            content=final_message.content
+            content=full_content
         )
         
         return {
             "type": "chat_response",
-            "content": final_message.content,
+            "content": full_content,
             "thread_id": conversation_id
         }
     except Exception as e:

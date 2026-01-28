@@ -1,22 +1,29 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 import logging
+from src.api.websockets.manager import manager
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
 @router.websocket("/ws")
+@router.websocket("/ws/")
 async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    logger.info("WebSocket connection accepted")
+    await manager.connect(websocket)
     
     try:
         while True:
-            data = await websocket.receive_text()
-            # Echo for now, as message processing moved to REST
-            await websocket.send_text(f"Message received: {data}")
+            try:
+                data = await websocket.receive_text()
+                # Echo or handle incoming client messages if needed
+                await websocket.send_json({"type": "echo", "data": data})
+            except Exception as e:
+                if "disconnect" in str(e).lower():
+                    break
+                raise e
 
     except WebSocketDisconnect:
-        logger.info("WebSocket connection closed")
+        manager.disconnect(websocket)
     except Exception as e:
         logger.error(f"WebSocket error: {e}")
+        manager.disconnect(websocket)
