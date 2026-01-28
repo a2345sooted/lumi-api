@@ -135,7 +135,7 @@ async def post_user_message(
         }
         
         # Broadcast thinking state
-        await manager.broadcast({
+        await manager.send_to_user(user_id, {
             "type": "lumi_thinking",
             "conversation_id": conversation_id
         })
@@ -152,7 +152,7 @@ async def post_user_message(
                     pass 
                 else:
                     full_content += content_chunk
-                    await manager.broadcast({
+                    await manager.send_to_user(user_id, {
                         "type": "token",
                         "content": content_chunk,
                         "conversation_id": conversation_id
@@ -162,7 +162,7 @@ async def post_user_message(
                  pass
         
         # Broadcast done event
-        await manager.broadcast({
+        await manager.send_to_user(user_id, {
             "type": "done",
             "conversation_id": conversation_id
         })

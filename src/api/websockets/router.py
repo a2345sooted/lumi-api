@@ -13,8 +13,7 @@ async def websocket_endpoint(
     websocket: WebSocket,
     user_id: str = Depends(get_ws_user_id)
 ):
-    await manager.connect(websocket)
-    logger.info(f"User {user_id} connected to websocket")
+    await manager.connect(websocket, user_id)
     
     try:
         while True:
@@ -28,7 +27,7 @@ async def websocket_endpoint(
                 raise e
 
     except WebSocketDisconnect:
-        manager.disconnect(websocket)
+        manager.disconnect(websocket, user_id)
     except Exception as e:
         logger.error(f"WebSocket error: {e}")
-        manager.disconnect(websocket)
+        manager.disconnect(websocket, user_id)
