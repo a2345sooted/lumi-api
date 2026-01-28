@@ -58,6 +58,20 @@ async def get_conversation_messages(conversation_id: str, db: Session = Depends(
     messages = repo.get_messages_by_conversation(conv_id)
     return messages
 
+@router.delete("/conversations/{conversation_id}")
+async def delete_conversation(conversation_id: str, db: Session = Depends(get_db)):
+    repo = ConversationRepository(db)
+    try:
+        conv_id = uuid.UUID(conversation_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid conversation ID format")
+    
+    success = repo.delete(conv_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Conversation not found")
+    
+    return {"status": "success", "message": "Conversation deleted"}
+
 @router.post("/conversations/{conversation_id}/messages")
 async def post_user_message(
     conversation_id: str, 
