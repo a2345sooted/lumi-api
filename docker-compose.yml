@@ -19,7 +19,7 @@ services:
   flyway:
     image: flyway/flyway
     container_name: lumi-flyway
-    command: -url=jdbc:postgresql://db:5432/lumi -user=local -password=local migrate
+    command: -url=jdbc:postgresql://db:5432/lumi -user=local -password=local -baselineOnMigrate=true migrate
     volumes:
       - ./db/migrations:/flyway/sql
     depends_on:
