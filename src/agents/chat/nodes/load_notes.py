@@ -8,8 +8,16 @@ async def load_notes_node(state: AgentState):
         repo = UserNoteRepository(db)
         user_id = state.get("user_id")
         notes = repo.list_all(user_id=user_id)
-        # Extract content from notes
-        note_contents = [note.content for note in notes]
-        return {"user_notes": note_contents}
+        
+        dynamic_notes = [note.content for note in notes if note.note_type == "Dynamic"]
+        profile_notes = [note.content for note in notes if note.note_type == "Profile"]
+        
+        # We expect only one profile note for now, but joining them just in case
+        profile_content = "\n".join(profile_notes)
+        
+        return {
+            "user_notes": dynamic_notes,
+            "user_profile": profile_content
+        }
     finally:
         db.close()

@@ -7,8 +7,8 @@ class UserNoteRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create(self, content: str, embedding: Optional[List[float]] = None, user_id: Optional[str] = None) -> UserNote:
-        db_note = UserNote(content=content, embedding=embedding, user_id=user_id)
+    def create(self, content: str, note_type: str = "Dynamic", embedding: Optional[List[float]] = None, user_id: Optional[str] = None) -> UserNote:
+        db_note = UserNote(content=content, note_type=note_type, embedding=embedding, user_id=user_id)
         self.db.add(db_note)
         self.db.commit()
         self.db.refresh(db_note)

@@ -15,7 +15,7 @@ async def chat_node(state: AgentState):
     
     profile_context = ""
     if state.get("user_profile"):
-        profile_context = "\n\nHere is the user's profile information:\n" + "\n".join([f"- {k}: {v}" for k, v in state["user_profile"].items()])
+        profile_context = f"\n\nHere is the user's profile information:\n{state['user_profile']}"
     
     system_message = SystemMessage(content=f"You are a helpful assistant. Always respond with valid markdown.{notes_context}{profile_context}")
     messages = [system_message] + state["messages"]

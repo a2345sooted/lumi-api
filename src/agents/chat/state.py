@@ -6,4 +6,4 @@ class AgentState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
     user_id: str
     user_notes: List[str]
-    user_profile: Dict[str, Any]
+    user_profile: str
