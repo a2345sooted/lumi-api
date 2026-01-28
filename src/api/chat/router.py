@@ -10,6 +10,7 @@ from src.api.websockets.manager import manager
 from src.agents.registry import get_chat_agent
 from src.database import get_db
 from src.repos.chat import ConversationRepository, MessageRepository
+from src.api.auth import get_current_user_id
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +18,6 @@ router = APIRouter()
 
 class UserMessageRequest(BaseModel):
     message: str
-    user_id: Optional[str] = None
 
 class CreateConversationResponse(BaseModel):
     id: str
@@ -37,36 +37,59 @@ class MessageResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 @router.post("/conversations", response_model=CreateConversationResponse)
-async def create_conversation(user_id: Optional[str] = None, db: Session = Depends(get_db)):
+async def create_conversation(
+    user_id: str = Depends(get_current_user_id), 
+    db: Session = Depends(get_db)
+):
     repo = ConversationRepository(db)
     conversation = repo.create(user_id=user_id)
     return {"id": str(conversation.id)}
 
 @router.get("/conversations", response_model=List[ConversationResponse])
-async def list_conversations(user_id: Optional[str] = None, db: Session = Depends(get_db)):
+async def list_conversations(
+    user_id: str = Depends(get_current_user_id), 
+    db: Session = Depends(get_db)
+):
     repo = ConversationRepository(db)
     conversations = repo.list_all(user_id=user_id)
     return conversations
 
 @router.get("/conversations/{conversation_id}/messages", response_model=List[MessageResponse])
-async def get_conversation_messages(conversation_id: str, db: Session = Depends(get_db)):
+async def get_conversation_messages(
+    conversation_id: str, 
+    user_id: str = Depends(get_current_user_id),
+    db: Session = Depends(get_db)
+):
     repo = MessageRepository(db)
+    conv_repo = ConversationRepository(db)
     try:
         conv_id = uuid.UUID(conversation_id)
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid conversation ID format")
     
+    conversation = conv_repo.get_by_id(conv_id)
+    if not conversation or conversation.user_id != user_id:
+        raise HTTPException(status_code=404, detail="Conversation not found")
+
     messages = repo.get_messages_by_conversation(conv_id)
     return messages
 
 @router.delete("/conversations/{conversation_id}")
-async def delete_conversation(conversation_id: str, db: Session = Depends(get_db)):
+async def delete_conversation(
+    conversation_id: str, 
+    user_id: str = Depends(get_current_user_id),
+    db: Session = Depends(get_db)
+):
     repo = ConversationRepository(db)
     try:
         conv_id = uuid.UUID(conversation_id)
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid conversation ID format")
     
+    conversation = repo.get_by_id(conv_id)
+    if not conversation or conversation.user_id != user_id:
+        raise HTTPException(status_code=404, detail="Conversation not found")
+
     success = repo.delete(conv_id)
     if not success:
         raise HTTPException(status_code=404, detail="Conversation not found")
@@ -77,12 +100,21 @@ async def delete_conversation(conversation_id: str, db: Session = Depends(get_db
 async def post_user_message(
     conversation_id: str, 
     request: UserMessageRequest,
+    user_id: str = Depends(get_current_user_id),
     db: Session = Depends(get_db)
 ):
     chat_agent = get_chat_agent()
     message_repo = MessageRepository(db)
     
     try:
+        conv_id = uuid.UUID(conversation_id)
+        
+        # Check if conversation exists and belongs to user
+        conv_repo = ConversationRepository(db)
+        conversation = conv_repo.get_by_id(conv_id)
+        if not conversation or conversation.user_id != user_id:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+
         # Save user message to database
         message_repo.add_message(
             conversation_id=conversation_id,
@@ -93,12 +125,12 @@ async def post_user_message(
         config = {
             "configurable": {
                 "thread_id": conversation_id,
-                "user_id": request.user_id
+                "user_id": user_id
             }
         }
         inputs = {
             "messages": [HumanMessage(content=request.message)],
-            "user_id": request.user_id
+            "user_id": user_id
         }
         
         # Broadcast thinking state

@@ -1,6 +1,7 @@
-from fastapi import APIRouter, WebSocket, WebSocketDisconnect
+from fastapi import APIRouter, WebSocket, WebSocketDisconnect, Depends, status
 import logging
 from src.api.websockets.manager import manager
+from src.api.auth import get_ws_user_id
 
 logger = logging.getLogger(__name__)
 
@@ -8,8 +9,12 @@ router = APIRouter()
 
 @router.websocket("/ws")
 @router.websocket("/ws/")
-async def websocket_endpoint(websocket: WebSocket):
+async def websocket_endpoint(
+    websocket: WebSocket,
+    user_id: str = Depends(get_ws_user_id)
+):
     await manager.connect(websocket)
+    logger.info(f"User {user_id} connected to websocket")
     
     try:
         while True:

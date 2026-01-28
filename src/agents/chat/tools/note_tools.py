@@ -2,7 +2,7 @@ from langchain_core.tools import tool
 from langchain_core.runnables import RunnableConfig
 from src.database import SessionLocal
 from src.repos.notes import UserNoteRepository
-from langchain_openai import OpenAIEmbeddings
+from src.services.embeddings import embeddings_service
 import logging
 
 logger = logging.getLogger(__name__)
@@ -22,8 +22,7 @@ def save_user_note(content: str, config: RunnableConfig) -> str:
         repo = UserNoteRepository(db)
         
         # Generate embedding
-        embeddings = OpenAIEmbeddings()
-        embedding = embeddings.embed_query(content)
+        embedding = embeddings_service.embed_query(content)
         
         note = repo.create(content=content, embedding=embedding, user_id=user_id)
         return f"Note saved successfully with ID: {note.id}"
