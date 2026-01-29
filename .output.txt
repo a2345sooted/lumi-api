@@ -1,865 +1,479 @@
-Connected to WebSocket as user_1_2t9R2fX3Q6V8Z9J0C1B4A5D6E1
-Created conversation: af870472-0565-4e22-953f-56130a17b79b
-Sending first message...
-Sending second message...
-Waiting for conversation_title_updated event...
-Received event: lumi_thinking
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: token
-Received event: conversation_title_updated
-SUCCESS: Received title update event!
-Event content: {
-  "type": "conversation_title_updated",
-  "conversation_id": "af870472-0565-4e22-953f-56130a17b79b",
-  "title": "Exploring Mars: Key Insights and Missions"
-}
+./.venv/lib/python3.13/site-packages/langsmith/__pycache__/pytest_plugin.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/langsmith/testing
+./.venv/lib/python3.13/site-packages/langsmith/pytest_plugin.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_jacobi.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_rw_lock.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_ecdsa.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_curves.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_eddsa.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_keys.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_numbertheory.py
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_sha3.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_ellipticcurve.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_pyecdsa.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_rw_lock.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_ecdsa.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_malformed_sigs.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_jacobi.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_ecdh.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_curves.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_eddsa.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_numbertheory.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_keys.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/__pycache__/test_der.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/ecdsa/test_der.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_ellipticcurve.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_sha3.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_pyecdsa.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_ecdh.py
+./.venv/lib/python3.13/site-packages/ecdsa/test_malformed_sigs.py
+./.venv/lib/python3.13/site-packages/annotated_types/__pycache__/test_cases.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/annotated_types/test_cases.py
+./.venv/lib/python3.13/site-packages/cryptography/hazmat/bindings/_rust/test_support.pyi
+./.venv/lib/python3.13/site-packages/starlette/__pycache__/testclient.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/starlette/testclient.py
+./.venv/lib/python3.13/site-packages/click/__pycache__/testing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/click/testing.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/plugin/__pycache__/pytestplugin.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/plugin/pytestplugin.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_sequence.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_results.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_insert.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_select.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_deprecations.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_ddl.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_dialect.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_deprecations.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_cte.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_reflection.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_ddl.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_dialect.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_update_delete.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_types.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_results.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_unicode_ddl.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_rowcount.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_insert.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_sequence.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/__pycache__/test_select.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_update_delete.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_reflection.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_rowcount.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_cte.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_types.py
+./.venv/lib/python3.13/site-packages/sqlalchemy/testing/suite/test_unicode_ddl.py
+./.venv/lib/python3.13/site-packages/regex/tests
+./.venv/lib/python3.13/site-packages/regex/tests/test_regex.py
+./.venv/lib/python3.13/site-packages/regex/tests/__pycache__/test_regex.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_pytesttester.pyi
+./.venv/lib/python3.13/site-packages/numpy/conftest.py
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests/test_linalg.py
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests/test_deprecations.py
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests/__pycache__/test_deprecations.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests/__pycache__/test_linalg.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/linalg/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/ma/testutils.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_old_ma.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_core.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_deprecations.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_deprecations.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_subclassing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_extras.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_arrayobject.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_core.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_mrecords.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/__pycache__/test_old_ma.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_subclassing.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_extras.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_arrayobject.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_mrecords.py
+./.venv/lib/python3.13/site-packages/numpy/ma/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/ma/__pycache__/testutils.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/ma/testutils.pyi
+./.venv/lib/python3.13/site-packages/numpy/_core/_umath_tests.pyi
+./.venv/lib/python3.13/site-packages/numpy/_core/_multiarray_tests.cpython-313-darwin.so
+./.venv/lib/python3.13/site-packages/numpy/_core/_operand_flag_tests.cpython-313-darwin.so
+./.venv/lib/python3.13/site-packages/numpy/_core/tests
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_numerictypes.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalar_methods.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalarmath.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_item_selection.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_coercion.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_limited_api.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_casting_floatingpoint_errors.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_unicode.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_cpu_dispatcher.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_arrayprint.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multithreading.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalarbuffer.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexerrors.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_print.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_half.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_arraymethod.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_mem_overlap.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_shape_base.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiprocessing.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_hashtable.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_interface.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_deprecations.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_finfo.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_errstate.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_nep50_promotions.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_records.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_cython.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_nditer.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_deprecations.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_indexing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_scalarbuffer.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_strings.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_mem_policy.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_array_coercion.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_scalarprint.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_multithreading.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_scalar_ctors.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_argparse.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_einsum.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_cpu_dispatcher.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_simd.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_getlimits.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_protocols.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_defchararray.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_array_api_info.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_records.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_print.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_scalarmath.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_numeric.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_arraymethod.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_custom_dtypes.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_conversion_utils.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test__exceptions.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_datetime.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_scalarinherit.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_umath_complex.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_dtype.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_indexerrors.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_finfo.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_multiprocessing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_casting_floatingpoint_errors.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_unicode.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_abc.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_multiarray.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_simd_module.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_half.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_errstate.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_arrayobject.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_longdouble.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_array_interface.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_umath_accuracy.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_overrides.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_stringdtype.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_arrayprint.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_function_base.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_shape_base.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_api.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_hashtable.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_umath.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_ufunc.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_item_selection.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_dlpack.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_cpu_features.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_scalar_methods.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_limited_api.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_numerictypes.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_nep50_promotions.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_casting_unittests.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_memmap.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_extint128.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/__pycache__/test_mem_overlap.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_mem_policy.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_simd.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalarinherit.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_indexing.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_umath.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_numeric.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_function_base.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_datetime.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test__exceptions.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_extint128.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_cython.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_umath_complex.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/examples/limited_api/limited_api_latest.c
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_custom_dtypes.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_defchararray.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_conversion_utils.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_arrayobject.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalarprint.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_casting_unittests.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_abc.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_ufunc.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dtype.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_umath_accuracy.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_simd_module.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_getlimits.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_stringdtype.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_strings.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_dlpack.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_einsum.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_api.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_longdouble.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_overrides.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_scalar_ctors.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_multiarray.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_memmap.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_nditer.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_cpu_features.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_protocols.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_array_api_info.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_argparse.py
+./.venv/lib/python3.13/site-packages/numpy/_core/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/_core/_struct_ufunc_tests.cpython-313-darwin.so
+./.venv/lib/python3.13/site-packages/numpy/_core/_rational_tests.cpython-313-darwin.so
+./.venv/lib/python3.13/site-packages/numpy/_core/_umath_tests.cpython-313-darwin.so
+./.venv/lib/python3.13/site-packages/numpy/tests
+./.venv/lib/python3.13/site-packages/numpy/tests/test_warnings.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_matlib.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_ctypeslib.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_lazyloading.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test__all__.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_numpy_version.py
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_scripts.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_matlib.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_warnings.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_numpy_version.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_ctypeslib.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_numpy_config.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_reloading.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_public_api.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_lazyloading.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test_configtool.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/__pycache__/test__all__.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/tests/test_reloading.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_public_api.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_scripts.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_configtool.py
+./.venv/lib/python3.13/site-packages/numpy/tests/test_numpy_config.py
+./.venv/lib/python3.13/site-packages/numpy/_pyinstaller/tests
+./.venv/lib/python3.13/site-packages/numpy/_pyinstaller/tests/test_pyinstaller.py
+./.venv/lib/python3.13/site-packages/numpy/_pyinstaller/tests/__pycache__/test_pyinstaller.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/__pycache__/_pytesttester.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/__pycache__/conftest.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/typing/tests
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/test_isfile.py
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/test_typing.py
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/test_runtime.py
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/__pycache__/test_typing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/__pycache__/test_isfile.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/__pycache__/test_runtime.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/data/fail/testing.pyi
+./.venv/lib/python3.13/site-packages/numpy/typing/tests/data/reveal/testing.pyi
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_character.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_mixed.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_return_logical.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_assumed_shape.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_common.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_pyf_src.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_kind.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_isoc.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_array_from_pyobj.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_return_real.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_symbolic.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_size.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_callback.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_string.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_docs.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_quoted_character.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_parameter.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_routines.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_common.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_return_logical.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_kind.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_f2py2e.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_parameter.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_semicolon_split.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_modules.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_quoted_character.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_string.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_symbolic.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_block_docstring.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_f2cmap.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_character.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_array_from_pyobj.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_return_complex.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_pyf_src.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_crackfortran.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_size.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_assumed_shape.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_mixed.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_isoc.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_data.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_return_character.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_return_integer.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_callback.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_return_real.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_abstract_interface.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_value_attrspec.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/__pycache__/test_docs.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_abstract_interface.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_routines.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_f2cmap.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_semicolon_split.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_block_docstring.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_return_integer.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_return_character.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_data.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_value_attrspec.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_return_complex.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_modules.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_crackfortran.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_f2py2e.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/f2py/tests/src/isocintrin/isoCtests.f90
+./.venv/lib/python3.13/site-packages/numpy/testing
+./.venv/lib/python3.13/site-packages/numpy/testing/tests
+./.venv/lib/python3.13/site-packages/numpy/testing/tests/test_utils.py
+./.venv/lib/python3.13/site-packages/numpy/testing/tests/__pycache__/test_utils.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_type_check.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_utils.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_twodim_base.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_polynomial.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test__iotools.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_shape_base.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_ufunclike.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_index_tricks.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_twodim_base.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_arraypad.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_format.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test__datasource.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_stride_tricks.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_loadtxt.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_ufunclike.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_array_utils.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_nanfunctions.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test__version.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_type_check.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_recfunctions.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_packbits.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_polynomial.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_io.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_utils.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_function_base.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_index_tricks.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_shape_base.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_mixins.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_arraysetops.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_histograms.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test__iotools.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/__pycache__/test_arrayterator.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_arrayterator.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test__version.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_io.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_array_utils.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_arraysetops.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_function_base.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_arraypad.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_mixins.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_packbits.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test__datasource.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_stride_tricks.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_recfunctions.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_nanfunctions.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_loadtxt.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_format.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_histograms.py
+./.venv/lib/python3.13/site-packages/numpy/lib/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/fft/tests
+./.venv/lib/python3.13/site-packages/numpy/fft/tests/test_pocketfft.py
+./.venv/lib/python3.13/site-packages/numpy/fft/tests/test_helper.py
+./.venv/lib/python3.13/site-packages/numpy/fft/tests/__pycache__/test_pocketfft.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/fft/tests/__pycache__/test_helper.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/_pytesttester.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_generator_mt19937.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_randomstate.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_direct.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_extending.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_extending.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_generator_mt19937_regressions.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_random.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_randomstate.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_smoke.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_generator_mt19937.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_randomstate_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_direct.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/__pycache__/test_seed_sequence.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_smoke.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_randomstate_regression.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_seed_sequence.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/philox-testset-1.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/philox-testset-2.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/sfc64-testset-1.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/sfc64-testset-2.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/mt19937-testset-2.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/mt19937-testset-1.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/pcg64-testset-1.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/pcg64-testset-2.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/pcg64dxsm-testset-1.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/data/pcg64dxsm-testset-2.csv
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_generator_mt19937_regressions.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_random.py
+./.venv/lib/python3.13/site-packages/numpy/random/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_matrix_linalg.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_defmatrix.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_regression.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_interaction.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_numeric.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_masked_matrix.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_multiarray.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_defmatrix.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/__pycache__/test_matrix_linalg.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_interaction.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_numeric.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_masked_matrix.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_multiarray.py
+./.venv/lib/python3.13/site-packages/numpy/matrixlib/tests/test_regression.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_chebyshev.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_hermite_e.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_polynomial.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_laguerre.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_symbol.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_legendre.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_chebyshev.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_printing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_polyutils.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_polynomial.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_classes.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_hermite_e.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_hermite.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/__pycache__/test_laguerre.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_legendre.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_printing.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_hermite.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_classes.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_symbol.py
+./.venv/lib/python3.13/site-packages/numpy/polynomial/tests/test_polyutils.py
+./.venv/lib/python3.13/site-packages/anyio/abc/__pycache__/_testing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/anyio/abc/_testing.py
+./.venv/lib/python3.13/site-packages/anyio/_core/__pycache__/_testing.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/anyio/_core/_testing.py
+./.venv/lib/python3.13/site-packages/anyio/__pycache__/pytest_plugin.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/anyio/pytest_plugin.py
+./.venv/lib/python3.13/site-packages/sniffio/_tests
+./.venv/lib/python3.13/site-packages/sniffio/_tests/test_sniffio.py
+./.venv/lib/python3.13/site-packages/sniffio/_tests/__pycache__/test_sniffio.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/fastapi/__pycache__/testclient.cpython-313.pyc
+./.venv/lib/python3.13/site-packages/fastapi/testclient.py
+./.venv/lib/python3.13/site-packages/uvloop/_testbase.py
+./.venv/lib/python3.13/site-packages/uvloop/__pycache__/_testbase.cpython-313.pyc
