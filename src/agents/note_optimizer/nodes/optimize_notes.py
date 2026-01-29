@@ -26,13 +26,19 @@ async def optimize_notes_node(state: NoteOptimizerState):
         
         system_prompt = (
             "You are an expert at information consolidation and deduplication. "
-            "Your goal is to take a list of user notes and optimize them. "
-            "1. Remove duplicate information. "
-            "2. Consolidate related notes into clearer, more concise notes without losing any information. "
-            "3. Maintain the note_type (Profile or Dynamic). Profile notes should contain personal identity information (name, email, etc.). "
-            "4. If multiple Profile notes exist, consolidate them into a single Profile note if possible. "
-            "5. Resolve contradictions: If two notes contradict each other, use the 'Created' timestamp to determine which one is more recent. The more recent note should take precedence. "
-            "6. Return the final list of optimized notes."
+            "Your goal is to take a list of user notes and optimize them into a clean, structured knowledge base. "
+            "\n\nRules:\n"
+            "1. Remove duplicate information.\n"
+            "2. Profile Information: Identify notes that contain personal identity information (e.g., name, email, location, profession, birthdate). "
+            "Consolidate ALL profile information into a single note with note_type 'Profile'. "
+            "The content of this note MUST be a single JSON object containing all identified profile fields.\n"
+            "3. Related Dynamic Notes: Identify groups of dynamic notes that are closely related (e.g., all notes about 'hobbies', 'family', 'travel preferences', or 'work projects'). "
+            "Consolidate each related group into a single note with note_type 'Dynamic'. "
+            "The content of these consolidated notes SHOULD be a JSON object if they contain multiple distinct but related pieces of information. "
+            "Unrelated dynamic notes should remain as separate string-based or simple JSON notes.\n"
+            "4. Contradictions: If two notes contradict each other, use the '(Created: timestamp)' prefix to determine which one is more recent. The more recent information MUST take precedence.\n"
+            "5. Preservation: Ensure no unique or important information is lost during consolidation.\n"
+            "6. Output: Return a list of optimized notes, where each note has 'content' (string, which can be a JSON string) and 'note_type' ('Profile' or 'Dynamic')."
         )
         
         human_prompt = f"Here are the notes to optimize:\n\n{notes_str}"
