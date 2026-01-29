@@ -1,8 +1,19 @@
 import logging
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env in project root
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+env_path = os.path.join(root_dir, ".env")
+load_dotenv(env_path)
+
+print(f"Loaded environment. PORT: {os.getenv('PORT')}")
+
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from src.common.cors import setup_cors
 from src.common.logging_config import setup_logging
+
 from src.common.services.checkpointer import init_checkpointer, close_checkpointer, get_checkpointer
 from src.api_server.api.websockets.router import router as ws_router
 from src.api_server.api.chat.router import router as chat_router
@@ -15,7 +26,8 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting up lumi...")
+    port = os.getenv("PORT", "8000")
+    logger.info(f"Starting up lumi on port {port}...")
     # Initialize checkpointer
     checkpointer = await init_checkpointer()
     
@@ -44,3 +56,8 @@ app.include_router(chat_router, prefix="/api/chat", tags=["chat"])
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.getenv("PORT", "8000"))
+    uvicorn.run("src.api_server.main:app", host="0.0.0.0", port=port, reload=True)

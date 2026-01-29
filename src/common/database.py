@@ -8,15 +8,26 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-if not DATABASE_URL:
-    raise ValueError("DATABASE_URL environment variable is not set")
+def get_engine():
+    url = os.getenv("DATABASE_URL")
+    if not url:
+        raise ValueError("DATABASE_URL environment variable is not set")
+    return create_engine(
+        url,
+        pool_pre_ping=True,
+        pool_recycle=3600,
+    )
 
-engine = create_engine(
-    DATABASE_URL,
-    pool_pre_ping=True,
-    pool_recycle=3600,
-)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+engine = None
+
+def get_session_local():
+    global engine
+    if engine is None:
+        engine = get_engine()
+    return sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+def SessionLocal():
+    return get_session_local()()
 
 Base = declarative_base()
 

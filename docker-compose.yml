@@ -58,6 +58,7 @@ services:
       exit 0;
       "
 
+
 volumes:
   pgdata:
   minio_data:
