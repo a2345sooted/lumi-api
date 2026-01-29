@@ -144,6 +144,7 @@ async def post_user_message(
         # Use run_chat_stream to capture tokens and trigger optimizer
         async for chunk_data in run_chat_stream(chat_agent, inputs, config):
             chunk, metadata = chunk_data
+            
             if isinstance(chunk, AIMessage) and chunk.content:
                 content_chunk = chunk.content
                 if isinstance(content_chunk, list):

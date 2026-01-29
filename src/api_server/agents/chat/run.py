@@ -31,10 +31,14 @@ async def run_chat_stream(chat_agent, inputs, config):
     notes_saved = False
     try:
         async for chunk_data in chat_agent.astream(inputs, config=config, stream_mode="messages"):
-            yield chunk_data
-            
             chunk, metadata = chunk_data
+            
+            # Only yield chunks from the chat node to avoid leaking other node outputs (like title updates)
+            if metadata.get("langgraph_node") == "chat":
+                yield chunk_data
+            
             # Check if this chunk contains a tool call to save_user_note or update_user_profile
+            # Tool calls are usually in the 'chat' node chunks anyway
             if hasattr(chunk, "tool_calls") and chunk.tool_calls:
                 for tool_call in chunk.tool_calls:
                     if tool_call["name"] in ["save_user_note", "update_user_profile"]:
