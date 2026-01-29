@@ -70,8 +70,7 @@ async def post_user_message(
     
     # Broadcast thinking state
     await manager.send_to_user(user_id_str, {
-        "type": "lumi_thinking",
-        "conversation_id": thread_id
+        "type": "lumi_thinking"
     })
 
     full_content = ""
@@ -89,8 +88,7 @@ async def post_user_message(
                 full_content += content_chunk
                 await manager.send_to_user(user_id_str, {
                     "type": "token",
-                    "content": content_chunk,
-                    "conversation_id": thread_id
+                    "content": content_chunk
                 })
         elif hasattr(chunk, "tool_calls") and chunk.tool_calls:
              # It's a message with tool calls, but maybe no content yet
@@ -98,8 +96,7 @@ async def post_user_message(
     
     # Broadcast done event
     await manager.send_to_user(user_id_str, {
-        "type": "done",
-        "conversation_id": thread_id
+        "type": "done"
     })
 
     # Save assistant response to database
