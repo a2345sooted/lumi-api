@@ -7,6 +7,7 @@ from src.api_server.agents.chat.nodes.load_current_time import load_current_time
 from src.api_server.agents.chat.tools.note_tools import save_user_note
 from src.api_server.agents.chat.tools.profile_tools import update_user_profile
 from src.api_server.agents.chat.tools.personality_tools import get_assistant_info
+from src.api_server.agents.chat.tools.health_tools import get_hydration_rubric
 from src.api_server.agents.chat.router import should_continue
 
 def compile_chat_agent(checkpointer=None):
@@ -15,7 +16,7 @@ def compile_chat_agent(checkpointer=None):
     workflow.add_node("load_current_time", load_current_time_node)
     workflow.add_node("load_notes", load_notes_node)
     workflow.add_node("chat", chat_node)
-    workflow.add_node("tools", ToolNode([save_user_note, update_user_profile, get_assistant_info]))
+    workflow.add_node("tools", ToolNode([save_user_note, update_user_profile, get_assistant_info, get_hydration_rubric]))
     
     workflow.add_edge(START, "load_current_time")
     workflow.add_edge("load_current_time", "load_notes")

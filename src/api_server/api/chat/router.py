@@ -3,6 +3,7 @@ from pydantic import BaseModel, ConfigDict
 from typing import Optional, List
 import uuid
 import datetime
+import asyncio
 import logging
 from sqlalchemy.orm import Session
 from langchain_core.messages import HumanMessage, AIMessage
@@ -43,10 +44,17 @@ async def post_user_message(
     user_id: uuid.UUID = Depends(get_current_user_id),
     db: Session = Depends(get_db)
 ):
+    user_id_str = str(user_id)
+    
+    # Broadcast thinking state immediately
+    await manager.send_to_user(user_id_str, {
+        "type": "lumi_thinking"
+    })
+    await asyncio.sleep(1)
+
     chat_agent = get_chat_agent()
     message_repo = UserMessageRepository(db)
     
-    user_id_str = str(user_id)
     # Using user_id_str as thread_id for one-conversation-per-user
     thread_id = user_id_str
 
@@ -68,11 +76,6 @@ async def post_user_message(
         "user_id": user_id_str
     }
     
-    # Broadcast thinking state
-    await manager.send_to_user(user_id_str, {
-        "type": "lumi_thinking"
-    })
-
     full_content = ""
     # Use run_chat_stream to capture tokens and trigger optimizer
     async for chunk_data in run_chat_stream(chat_agent, inputs, config):
