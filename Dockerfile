@@ -8,14 +8,17 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
+# Create a virtual environment and install dependencies
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
 COPY requirements.txt .
-RUN pip install --no-cache-dir --user -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 
 # Stage 2: Final image
@@ -25,22 +28,21 @@ FROM python:3.11-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app \
-    PORT=8000
+    PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /app
 
 # Install runtime system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq5 \
     && rm -rf /var/lib/apt/lists/*
+
+# Copy virtual environment from builder
+COPY --from=builder /opt/venv /opt/venv
 
 # Create a non-root user
 RUN adduser --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
-
-# Copy installed dependencies from builder
-COPY --from=builder /root/.local /home/appuser/.local
-ENV PATH=/home/appuser/.local/bin:$PATH
 
 # Copy source code
 COPY --chown=appuser:appuser src/ /app/src/
@@ -48,5 +50,9 @@ COPY --chown=appuser:appuser src/ /app/src/
 # Expose the application port
 EXPOSE 8000
 
+# Health check
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()" || exit 1
+
 # Start the application
-CMD ["uvicorn", "src.api_server.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "src.api_server.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]
