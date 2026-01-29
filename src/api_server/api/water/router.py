@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, ConfigDict
-from typing import List
+from typing import List, Optional
 import uuid
 import datetime
 from sqlalchemy.orm import Session
@@ -12,10 +12,12 @@ router = APIRouter()
 
 class WaterLogCreate(BaseModel):
     amount_oz: float
+    drank_at: Optional[datetime.datetime] = None
 
 class WaterLogResponse(BaseModel):
     id: uuid.UUID
     amount_oz: float
+    drank_at: datetime.datetime
     created_at: datetime.datetime
 
     model_config = ConfigDict(from_attributes=True)
@@ -35,7 +37,11 @@ async def create_water_log(
     db: Session = Depends(get_db)
 ):
     repo = WaterRepository(db)
-    return repo.create(user_id=user_id, amount_oz=request.amount_oz)
+    return repo.create(
+        user_id=user_id, 
+        amount_oz=request.amount_oz,
+        drank_at=request.drank_at
+    )
 
 @router.delete("/{log_id}")
 async def delete_water_log(
