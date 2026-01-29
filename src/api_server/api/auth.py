@@ -3,6 +3,8 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from typing import Optional
 import logging
 
+import os
+
 logger = logging.getLogger(__name__)
 
 security = HTTPBearer(auto_error=False)
@@ -15,8 +17,6 @@ TOKEN_TO_USER_MAP = {
     "user-4-token": "user_4_qW8eR3tY7uI0oP2aS5dF6gH1jK",
 }
 
-DEFAULT_FAKE_USER_ID = "user_default_zX9cV8bN7mQ1wE2r3tY4u5i6o7"
-
 async def get_current_user_id(credentials: Optional[HTTPAuthorizationCredentials] = Security(security)) -> str:
     # We log this for debugging purposes during development
     token = credentials.credentials if credentials else None
@@ -26,7 +26,7 @@ async def get_current_user_id(credentials: Optional[HTTPAuthorizationCredentials
             return TOKEN_TO_USER_MAP[token]
     
     # Default fallback
-    return DEFAULT_FAKE_USER_ID
+    return "user_default_zX9cV8bN7mQ1wE2r3tY4u5i6o7"
 
 async def get_ws_user_id(token: Optional[str] = Query(None)) -> str:
     """

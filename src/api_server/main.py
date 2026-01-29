@@ -60,4 +60,5 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", "8000"))
-    uvicorn.run("src.api_server.main:app", host="0.0.0.0", port=port, reload=True)
+    reload = os.getenv("RELOAD", "true").lower() == "true"
+    uvicorn.run("src.api_server.main:app", host="0.0.0.0", port=port, reload=reload)
