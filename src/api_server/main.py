@@ -14,6 +14,7 @@ from src.common.logging_config import setup_logging
 from src.common.services.checkpointer import init_checkpointer, close_checkpointer, get_checkpointer
 from src.api_server.api.websockets.router import router as ws_router
 from src.api_server.api.chat.router import router as chat_router
+from src.api_server.api.water.router import router as water_router
 from src.api_server.agents.chat.agent import compile_chat_agent
 from src.common.agents.note_optimizer.agent import compile_note_optimizer_agent
 from src.common.agents.registry import register_chat_agent, register_note_optimizer_agent
@@ -47,6 +48,7 @@ setup_cors(app)
 
 app.include_router(ws_router)
 app.include_router(chat_router, prefix="/api/chat", tags=["chat"])
+app.include_router(water_router, prefix="/api/water", tags=["water"])
 
 
 @app.get("/health")
