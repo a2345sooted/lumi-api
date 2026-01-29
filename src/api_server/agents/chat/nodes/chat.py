@@ -5,7 +5,7 @@ from src.common.ai_constants import OPENAI_MODEL_5_2
 from src.api_server.agents.chat.tools.note_tools import save_user_note
 from src.api_server.agents.chat.tools.profile_tools import update_user_profile
 from src.common.database import SessionLocal
-from src.common.repos.chat import ConversationRepository
+from src.common.repos.chat import UserMessageRepository
 import uuid
 
 async def chat_node(state: AgentState, config=None):
@@ -40,8 +40,8 @@ async def chat_node(state: AgentState, config=None):
         if chat_run_id:
             db = SessionLocal()
             try:
-                chat_repo = ConversationRepository(db)
-                chat_repo.end_chat_run(uuid.UUID(chat_run_id), status="FAILED")
+                message_repo = UserMessageRepository(db)
+                message_repo.end_chat_run(uuid.UUID(chat_run_id), status="FAILED")
             finally:
                 db.close()
         raise e

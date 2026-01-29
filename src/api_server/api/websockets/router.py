@@ -13,6 +13,7 @@ async def websocket_endpoint(
     websocket: WebSocket,
     user_id: str = Depends(get_ws_user_id)
 ):
+    # user_id is returned as a string from get_ws_user_id (which is str(user.id))
     await manager.connect(websocket, user_id)
     
     try:

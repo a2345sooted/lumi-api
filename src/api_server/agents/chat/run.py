@@ -4,7 +4,7 @@ import uuid
 from src.common.agents.registry import get_note_optimizer_agent
 from src.common.database import SessionLocal
 from src.common.repos.notes import UserNoteRepository
-from src.common.repos.chat import ConversationRepository
+from src.common.repos.chat import UserMessageRepository
 
 logger = logging.getLogger(__name__)
 
@@ -19,11 +19,11 @@ async def run_chat_stream(chat_agent, inputs, config):
     thread_id = uuid.UUID(thread_id_str) if thread_id_str else None
     
     db = SessionLocal()
-    chat_repo = ConversationRepository(db)
+    message_repo = UserMessageRepository(db)
     chat_run = None
     
     if user_id and thread_id:
-        chat_run = chat_repo.start_chat_run(user_id, thread_id)
+        chat_run = message_repo.start_chat_run(uuid.UUID(user_id), thread_id)
         # Pass chat_run_id to the state/config if needed by nodes, 
         # but for now we'll handle errors in the nodes themselves or here.
         config["configurable"]["chat_run_id"] = str(chat_run.id)
@@ -46,12 +46,12 @@ async def run_chat_stream(chat_agent, inputs, config):
         
         # If we reached here, the chat was successful
         if chat_run:
-            chat_repo.end_chat_run(chat_run.id, status="COMPLETED")
+            message_repo.end_chat_run(chat_run.id, status="COMPLETED")
             
     except Exception as e:
         logger.error(f"Error during chat run: {e}")
         if chat_run:
-            chat_repo.end_chat_run(chat_run.id, status="FAILED")
+            message_repo.end_chat_run(chat_run.id, status="FAILED")
         raise e
     finally:
         db.close()

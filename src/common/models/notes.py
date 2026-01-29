@@ -8,7 +8,7 @@ class UserNote(Base):
     __tablename__ = "user_notes"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    user_id = Column(String, nullable=True)
+    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=True)
     content = Column(String, nullable=False)
     note_type = Column(String, nullable=False, server_default="Dynamic")
     embedding = Column(VECTOR(1536))
@@ -18,8 +18,8 @@ class UserNote(Base):
 class NoteOptimizationRun(Base):
     __tablename__ = "note_optimization_runs"
 
-    user_id = Column(String, primary_key=True)
-    thread_id = Column(UUID(as_uuid=True), ForeignKey("conversations.id", ondelete="CASCADE"), nullable=True)
+    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    thread_id = Column(UUID(as_uuid=True), nullable=True)
     status = Column(String, nullable=False, server_default="PROCESSING")
     started_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())

@@ -5,6 +5,9 @@ import logging
 import os
 import requests
 from jose import jwt, JWTError
+from sqlalchemy.orm import Session
+from src.common.database import SessionLocal
+from src.common.repos.users import UserRepository
 
 logger = logging.getLogger(__name__)
 
@@ -96,7 +99,16 @@ async def get_current_user_id(credentials: Optional[HTTPAuthorizationCredentials
         )
     
     logger.debug(f"Auth token provided: {token}")
-    return verify_token(token)
+    sub = verify_token(token)
+    
+    # Resolve sub to local user UUID
+    db = SessionLocal()
+    try:
+        repo = UserRepository(db)
+        user = repo.get_or_create_by_sub(sub)
+        return str(user.id)
+    finally:
+        db.close()
 
 async def get_ws_user_id(token: Optional[str] = Query(None)) -> str:
     """
@@ -109,4 +121,13 @@ async def get_ws_user_id(token: Optional[str] = Query(None)) -> str:
         )
     
     logger.debug(f"WS Auth token provided: {token}")
-    return verify_token(token)
+    sub = verify_token(token)
+    
+    # Resolve sub to local user UUID
+    db = SessionLocal()
+    try:
+        repo = UserRepository(db)
+        user = repo.get_or_create_by_sub(sub)
+        return str(user.id)
+    finally:
+        db.close()

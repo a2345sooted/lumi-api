@@ -1,7 +1,7 @@
 from src.api_server.agents.chat.state import AgentState
 from src.common.database import SessionLocal
 from src.common.repos.notes import UserNoteRepository
-from src.common.repos.chat import ConversationRepository
+from src.common.repos.chat import UserMessageRepository
 import uuid
 
 async def load_notes_node(state: AgentState, config=None):
@@ -24,8 +24,8 @@ async def load_notes_node(state: AgentState, config=None):
     except Exception as e:
         chat_run_id = config.get("configurable", {}).get("chat_run_id")
         if chat_run_id:
-            chat_repo = ConversationRepository(db)
-            chat_repo.end_chat_run(uuid.UUID(chat_run_id), status="FAILED")
+            message_repo = UserMessageRepository(db)
+            message_repo.end_chat_run(uuid.UUID(chat_run_id), status="FAILED")
         raise e
     finally:
         db.close()

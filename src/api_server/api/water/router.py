@@ -22,7 +22,7 @@ class WaterLogResponse(BaseModel):
 
 @router.get("/", response_model=List[WaterLogResponse])
 async def list_water_logs(
-    user_id: str = Depends(get_current_user_id),
+    user_id: uuid.UUID = Depends(get_current_user_id),
     db: Session = Depends(get_db)
 ):
     repo = WaterRepository(db)
@@ -31,7 +31,7 @@ async def list_water_logs(
 @router.post("/", response_model=WaterLogResponse)
 async def create_water_log(
     request: WaterLogCreate,
-    user_id: str = Depends(get_current_user_id),
+    user_id: uuid.UUID = Depends(get_current_user_id),
     db: Session = Depends(get_db)
 ):
     repo = WaterRepository(db)
@@ -40,7 +40,7 @@ async def create_water_log(
 @router.delete("/{log_id}")
 async def delete_water_log(
     log_id: uuid.UUID,
-    user_id: str = Depends(get_current_user_id),
+    user_id: uuid.UUID = Depends(get_current_user_id),
     db: Session = Depends(get_db)
 ):
     repo = WaterRepository(db)

@@ -1,4 +1,0 @@
-CREATE TABLE note_optimization_runs (
-    user_id VARCHAR PRIMARY KEY,
-    started_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);

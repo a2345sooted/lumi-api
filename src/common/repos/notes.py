@@ -11,7 +11,7 @@ class UserNoteRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create(self, content: str, note_type: str = "Dynamic", embedding: Optional[List[float]] = None, user_id: Optional[str] = None) -> UserNote:
+    def create(self, content: str, note_type: str = "Dynamic", embedding: Optional[List[float]] = None, user_id: Optional[uuid.UUID] = None) -> UserNote:
         db_note = UserNote(content=content, note_type=note_type, embedding=embedding, user_id=user_id)
         self.db.add(db_note)
         self.db.commit()
@@ -21,7 +21,7 @@ class UserNoteRepository:
     def get_by_id(self, note_id: uuid.UUID) -> Optional[UserNote]:
         return self.db.query(UserNote).filter(UserNote.id == note_id).first()
 
-    def list_all(self, user_id: Optional[str] = None) -> List[UserNote]:
+    def list_all(self, user_id: Optional[uuid.UUID] = None) -> List[UserNote]:
         query = self.db.query(UserNote)
         if user_id:
             query = query.filter(UserNote.user_id == user_id)
@@ -35,7 +35,7 @@ class UserNoteRepository:
             return True
         return False
 
-    def replace_for_user(self, user_id: str, notes: List[dict]) -> None:
+    def replace_for_user(self, user_id: uuid.UUID, notes: List[dict]) -> None:
         """
         Replaces all notes for a user with a new set of notes.
         Each note in the list should be a dict with 'content', 'note_type', and optionally 'embedding'.
@@ -51,7 +51,7 @@ class UserNoteRepository:
             self.db.add(db_note)
         self.db.commit()
 
-    def start_optimization_run(self, user_id: str, thread_id: Optional[uuid.UUID] = None) -> bool:
+    def start_optimization_run(self, user_id: uuid.UUID, thread_id: Optional[uuid.UUID] = None) -> bool:
         """
         Attempts to start an optimization run for a user.
         Returns True if the run was started, False if one is already in progress.
@@ -79,7 +79,7 @@ class UserNoteRepository:
             logger.error(f"Error starting optimization run for user {user_id}: {e}")
             return False
 
-    def end_optimization_run(self, user_id: str, status: str = "COMPLETED") -> None:
+    def end_optimization_run(self, user_id: uuid.UUID, status: str = "COMPLETED") -> None:
         """
         Ends an optimization run for a user by updating the status.
         """
