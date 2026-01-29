@@ -128,6 +128,7 @@ ENV/
 env.bak/
 venv.bak/
 flyway.conf
+*.pem
 
 # Spyder project settings
 .spyderproject
