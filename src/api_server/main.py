@@ -2,10 +2,9 @@ import logging
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env in project root
-root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-env_path = os.path.join(root_dir, ".env")
-load_dotenv(env_path)
+load_dotenv()
+
+PORT = int(os.getenv("PORT", "1982"))
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
@@ -24,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting up lumi on port 8000...")
+    logger.info(f"Starting up lumi on port {PORT}...")
     # Initialize checkpointer
     checkpointer = await init_checkpointer()
     
@@ -62,4 +61,4 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
     reload = os.getenv("RELOAD", "true").lower() == "true"
-    uvicorn.run("src.api_server.main:app", host="0.0.0.0", port=8000, reload=reload)
+    uvicorn.run("src.api_server.main:app", host="0.0.0.0", port=PORT, reload=reload)

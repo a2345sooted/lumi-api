@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict, Any
 from pydantic import BaseModel, Field
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -9,7 +9,7 @@ from src.common.database import SessionLocal
 from src.common.repos.notes import UserNoteRepository
 
 class OptimizedNotes(BaseModel):
-    notes: List[NoteDict] = Field(description="The list of optimized and consolidated notes.")
+    notes: List[Dict[str, Any]] = Field(description="The list of optimized and consolidated notes.")
 
 async def optimize_notes_node(state: NoteOptimizerState):
     db = SessionLocal()

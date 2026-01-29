@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lumi-api:local
+    container_name: lumi-api
+
+    env_file:
+      - .env
+
+    environment:
+      PORT: "8000"
+
+      # IMPORTANT: Use Docker service names, not localhost
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: lumi
+      DB_USER: local
+      DB_PASSWORD: local
+      MINIO_ENDPOINT: http://minio:9000
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      db:
+        condition: service_healthy
+      minio:
+        condition: service_healthy

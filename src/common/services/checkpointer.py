@@ -4,12 +4,9 @@ import os
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
 from psycopg_pool import AsyncConnectionPool
 
+from src.common.database import get_async_pool
+
 logger = logging.getLogger(__name__)
-
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://local:local@localhost:5432/lumi")
-
-if DATABASE_URL.startswith("postgresql+asyncpg://"):
-    DATABASE_URL = DATABASE_URL.replace("postgresql+asyncpg://", "postgresql://", 1)
 
 # Global checkpointer instance and the pool
 _pool: AsyncConnectionPool = None
@@ -17,21 +14,15 @@ _checkpointer: AsyncPostgresSaver = None
 
 async def init_checkpointer():
     """
-    Initialize the checkpointer using a connection pool.
+    Initialize the checkpointer using a connection pool from centralized database config.
     Call this during application startup (e.g., in FastAPI lifespan).
     """
     global _pool, _checkpointer
     
     if _pool is None:
-        _pool = AsyncConnectionPool(
-            conninfo=DATABASE_URL,
-            max_size=20,
-            kwargs={"autocommit": True, "prepare_threshold": 0},
-            open=False,
-            check=AsyncConnectionPool.check_connection,
-        )
+        _pool = get_async_pool(max_size=20)
         await _pool.open()
-        logger.info("Connection pool for LangGraph checkpointer opened")
+        logger.info("Connection pool for LangGraph checkpointer opened using centralized database config")
     
     if _checkpointer is None:
         _checkpointer = AsyncPostgresSaver(conn=_pool)
